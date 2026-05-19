@@ -1,0 +1,214 @@
+.diff-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 64px);
+}
+
+/* ---- toolbar ---- */
+
+.diff-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid #ebedf0;
+  background: #fafafa;
+  flex-shrink: 0;
+}
+
+.diff-hint {
+  font-size: 12px;
+  color: #999;
+}
+
+.diff-stats {
+  display: flex;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'SF Mono', 'Fira Code', 'Roboto Mono', 'Consolas', 'Menlo', monospace;
+}
+
+.diff-stat-removed { color: #cf222e; }
+.diff-stat-added { color: #1a7f37; }
+.diff-stat-modified { color: #9a6700; }
+
+/* ---- input mode: two textareas ---- */
+
+.diff-input-panels {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.diff-input-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.diff-input-panel:first-child {
+  border-right: 1px solid #ebedf0;
+}
+
+.diff-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: #fafafa;
+  border-bottom: 1px solid #ebedf0;
+  flex-shrink: 0;
+}
+
+.diff-textarea {
+  flex: 1;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 12px 16px;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #1e1e1e;
+  background: #fff;
+  tab-size: 2;
+}
+
+.diff-textarea::placeholder {
+  color: #bbb;
+}
+
+.diff-char-counter-header {
+  font-size: 13px;
+  color: #999;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Consolas', 'Menlo', monospace;
+}
+
+.diff-char-diff {
+  font-weight: 600;
+}
+
+/* ---- result mode: side-by-side diff ---- */
+
+.diff-result-panels {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.diff-result-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.diff-result-panel:first-child {
+  border-right: 1px solid #ebedf0;
+}
+
+.diff-result-body {
+  flex: 1;
+  overflow: auto;
+  background: #fff;
+}
+
+/* ---- diff lines ---- */
+
+.diff-line {
+  display: flex;
+  min-height: 21px;
+  line-height: 21px;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 13px;
+}
+
+.diff-linenum {
+  width: 48px;
+  flex-shrink: 0;
+  text-align: right;
+  padding-right: 8px;
+  color: #999;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.diff-marker {
+  width: 20px;
+  flex-shrink: 0;
+  text-align: center;
+  font-weight: 700;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.diff-text {
+  flex: 1;
+  padding-right: 12px;
+  white-space: pre;
+  min-width: 0;
+}
+
+/* line-level colors */
+
+.diff-equal {
+  background: #fff;
+}
+
+.diff-removed {
+  background: #ffebe9;
+}
+
+.diff-removed .diff-linenum {
+  background: #ffcecb;
+  color: #82071e;
+}
+
+.diff-removed .diff-marker {
+  color: #82071e;
+}
+
+.diff-added {
+  background: #e6ffec;
+}
+
+.diff-added .diff-linenum {
+  background: #ccffd8;
+  color: #116329;
+}
+
+.diff-added .diff-marker {
+  color: #116329;
+}
+
+.diff-empty {
+  background: #f6f8fa;
+}
+
+.diff-empty .diff-linenum {
+  background: #f0f2f5;
+}
+
+/* word-level highlights (darker shade within changed lines) */
+
+.diff-word-removed {
+  background: #ff818266;
+  border-radius: 2px;
+}
+
+.diff-word-added {
+  background: #abf2bc80;
+  border-radius: 2px;
+}

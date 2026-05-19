@@ -1,0 +1,145 @@
+.yaml-validator-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 64px);
+  padding: 0;
+}
+
+.yaml-validator-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid #ebedf0;
+  background: #fafafa;
+  flex-shrink: 0;
+}
+
+.yaml-panel-header {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: #fafafa;
+  border-bottom: 1px solid #ebedf0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.yaml-error-bar {
+  padding: 8px 16px;
+  background: #fff2f0;
+  border-bottom: 1px solid #ffccc7;
+  flex-shrink: 0;
+}
+
+.yaml-error-bar pre {
+  margin: 0;
+  color: #ff4d4f;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 13px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.yaml-panel-body {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.yaml-editor-wrapper {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.yaml-line-numbers-wrapper {
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #f5f5f5;
+  border-right: 1px solid #e8e8e8;
+}
+
+/* Input overlay highlighting */
+.yaml-input-highlight-container {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.yaml-input-highlight-pre {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 8px 16px;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre;
+  overflow: auto;
+  background: #fff;
+  color: #1e1e1e;
+  pointer-events: none;
+  tab-size: 2;
+  word-wrap: normal;
+  border: none;
+}
+
+.yaml-input-textarea {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 8px 16px;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  color: transparent;
+  caret-color: #1e1e1e;
+  background: transparent;
+  tab-size: 2;
+  overflow: auto;
+  white-space: pre;
+  z-index: 1;
+}
+
+.yaml-input-textarea::placeholder {
+  color: #bbb;
+}
+
+/* Syntax highlighting — light theme (matching JsonFormatter input colors) */
+.yaml-key {
+  color: #0451a5;
+}
+
+.yaml-string {
+  color: #c2611c;
+}
+
+.yaml-number {
+  color: #098658;
+}
+
+.yaml-boolean {
+  color: #0000ff;
+}
+
+.yaml-null {
+  color: #0000ff;
+}
+
+.yaml-comment {
+  color: #008000;
+  font-style: italic;
+}

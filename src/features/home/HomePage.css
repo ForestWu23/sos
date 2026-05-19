@@ -1,0 +1,64 @@
+.homepage-card {
+  min-height: 260px;
+  height: 100%;
+  border: 1px solid #efefef;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: #fff;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage-card:hover {
+  border-color: #1677ff;
+  box-shadow: 0 4px 12px rgba(22, 119, 255, 0.12);
+}
+
+.homepage-card-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid #efefef;
+  background: #fafafa;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.homepage-card-body {
+  padding: 12px 16px;
+  flex: 1;
+}
+
+.homepage-card-body ul {
+  padding-left: 16px;
+  margin: 0;
+}
+
+.homepage-card-body ul li {
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #333;
+}
+
+.homepage-card-body ul li:last-child {
+  margin-bottom: 0;
+}
+
+.sos-notice {
+  margin-bottom: 28px;
+  padding: 16px 20px;
+  background: #f0f5ff;
+  border: 1px solid #d6e4ff;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.sos-notice-tagline {
+  font-size: 15px;
+  color: #333;
+}

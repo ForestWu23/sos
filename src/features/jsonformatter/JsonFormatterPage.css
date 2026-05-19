@@ -1,0 +1,224 @@
+.json-formatter-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 64px);
+  padding: 0;
+}
+
+.json-formatter-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid #ebedf0;
+  background: #fafafa;
+  flex-shrink: 0;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.json-formatter-toolbar-left {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.json-formatter-toolbar-right {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.json-formatter-panels {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.json-formatter-panel-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: calc(100vh - 64px - 52px);
+}
+
+.json-formatter-panel-col:first-child {
+  border-right: 1px solid #ebedf0;
+}
+
+.panel-header {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: #fafafa;
+  border-bottom: 1px solid #ebedf0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.panel-error {
+  font-size: 12px;
+  font-weight: 500;
+  color: #ff4d4f;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.panel-body {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.editor-wrapper {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.line-numbers-wrapper {
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #f5f5f5;
+  border-right: 1px solid #e8e8e8;
+}
+
+.output-wrapper {
+  background: #1e1e1e;
+}
+
+.output-line-numbers {
+  background: #252526;
+  border-right: 1px solid #333;
+}
+
+.line-numbers {
+  padding: 8px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.line-number {
+  padding: 0 12px 0 8px;
+  text-align: right;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #999;
+  min-width: 40px;
+}
+
+.output-line-numbers .line-number {
+  color: #606060;
+}
+
+.input-highlight-container {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.input-highlight-pre {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 8px 16px;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre;
+  overflow: auto;
+  background: #fff;
+  color: #1e1e1e;
+  pointer-events: none;
+  tab-size: 2;
+  word-wrap: normal;
+  border: none;
+}
+
+.json-input-textarea {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 8px 16px;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  color: transparent;
+  caret-color: #1e1e1e;
+  background: transparent;
+  tab-size: 2;
+  overflow: auto;
+  white-space: pre;
+  z-index: 1;
+}
+
+.json-input-textarea::placeholder {
+  color: #bbb;
+}
+
+.json-output-pre {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  padding: 8px 16px;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre;
+  overflow: auto;
+  background: #1e1e1e;
+  color: #d4d4d4;
+}
+
+.json-output-placeholder {
+  padding: 16px;
+  color: #bbb;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.json-error-message {
+  padding: 16px;
+  background: #fff2f0;
+  min-height: 100%;
+}
+
+.json-error-message pre {
+  margin: 0;
+  color: #ff4d4f;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 13px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Syntax highlighting — dark theme (output panel) */
+.json-key { color: #9cdcfe; }
+.json-string { color: #ce9178; }
+.json-number { color: #b5cea8; }
+.json-boolean { color: #569cd6; }
+.json-null { color: #569cd6; }
+.json-comment { color: #6a9955; font-style: italic; }
+
+/* Syntax highlighting — light theme (input panel) */
+.json-light-key { color: #0451a5; }
+.json-light-string { color: #c2611c; }
+.json-light-number { color: #098658; }
+.json-light-boolean { color: #0000ff; }
+.json-light-null { color: #0000ff; }
+.json-light-comment { color: #008000; font-style: italic; }

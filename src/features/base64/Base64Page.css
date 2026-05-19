@@ -1,0 +1,71 @@
+.base64-container {
+  width: 100%;
+  padding: 40px 40px 24px;
+}
+
+.base64-container h2 {
+  margin-bottom: 24px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.base64-input {
+  width: 100%;
+  min-height: 180px;
+  padding: 14px 16px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.base64-input:focus {
+  border-color: #1677ff;
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.1);
+}
+
+.base64-buttons {
+  margin: 16px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.base64-label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.base64-output-wrap {
+  margin-top: 24px;
+}
+
+.base64-output {
+  width: 100%;
+  min-height: 180px;
+  padding: 14px 16px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  background: #fafafa;
+  resize: vertical;
+  outline: none;
+}
+
+.base64-output:focus {
+  border-color: #1677ff;
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.1);
+}
+
+.base64-error {
+  color: #ff4d4f;
+  margin-top: 8px;
+  font-size: 13px;
+}
